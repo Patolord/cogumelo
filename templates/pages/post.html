@@ -1,0 +1,91 @@
+ {% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- ##### Breadcrumb Area Start ##### -->
+  <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url({% static 'img/bg-img/18.jpg' %});">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <div class="breadcrumb-text">
+            <h2>News Details</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="famie-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Mais Detalhes</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- ##### Breadcrumb Area End ##### -->
+
+  <!-- ##### News Details Area Start ##### -->
+  <section class="news-details-area section-padding-0-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- News Details Content -->
+          <div class="news-details-content">
+            <h6>Post on <a href="#" class="post-date">{{ post.created_at|date:'d, M Y' }}</a> / <a href="#" class="post-author">{{ post.author.get_full_name }}</a></h6>
+            <h2 class="post-title">{{ post.title }}</h2>
+
+            <div class="row">
+              <div class="col-lg-4">
+<p>{{ post.summary|safe }}</p>
+              </div>
+              <div class="col-lg-8">
+                <img class="w-100 mb-30" src="{{ post.photo_main.url }}" alt="">
+              </div>
+            </div>
+            <p>{{ post.content|safe }}</p>
+
+
+            <!-- Share & Tags -->
+            <div class="share-tags d-flex flex-wrap align-items-center justify-content-between">
+              <!-- Share -->
+              <div class="share-post d-flex align-items-center">
+                <span>Compartilhe esse Artigo:</span>
+                <!-- Share Icons -->
+                <div class="share-icons">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-pinterest"></i></a>
+                </div>
+              </div>
+              <!-- Tags -->
+              <ul class="famie-tags">
+                <li><a href="#">All product</a></li>
+                <li><a href="#">Freshy Fruit</a></li>
+                <li><a href="#">Sweet Corn</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Post Author -->
+          <div class="post-author-area d-flex align-items-center">
+            <div class="post-author-img">
+              <img src="{% static 'img/bg-img/38.jpg' %}" alt="">
+            </div>
+            <div class="post-author-description">
+              <a href="#">
+                <h5>{{ post.author.get_full_name }}</h5>
+              </a>
+              <p>Duis tincidunt turpis sodales, tincidunt nisi et, auctor nisigama. Curabitur vulputate sapien espanyol metusi ultricies fermentum necvelpa.
+                Maecenas eget lacinia est molestie ligula, et euismod auctor. </p>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!-- ##### News Details Area End ##### -->
+
+{% endblock %}

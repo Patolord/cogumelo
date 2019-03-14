@@ -1,0 +1,37 @@
+{% load static %}
+
+ <!-- Navbar Area -->
+    <div class="famie-main-menu">
+      <div class="classy-nav-container breakpoint-off">
+        <div class="container">
+          <!-- Menu -->
+          <nav class="classy-navbar justify-content-between" id="famieNav">
+            <!-- Nav Brand -->
+            <a href="{% url 'index' %}" class="nav-brand"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+            <!-- Navbar Toggler -->
+            <div class="classy-navbar-toggler">
+              <span class="navbarToggler"><span></span><span></span><span></span></span>
+            </div>
+            <!-- Menu -->
+            <div class="classy-menu">
+              <!-- Close Button -->
+              <div class="classycloseIcon">
+                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+              </div>
+              <!-- Navbar Start -->
+              <div class="classynav">
+                <ul>
+                  <li class="active"><a href="{% url 'index' %}">Início</a></li>
+                  <li><a href="{% url 'about' %}">Sobre</a></li>
+                  <li><a href="#our-products-area">Nossos Produtos</a></li>
+                  <li><a href="{% url 'news' %}">Notícias</a></li>
+                  <li><a href="#contact-area">Contato</a></li>
+                </ul>
+              </div>
+              <!-- Navbar End -->
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+</header>
