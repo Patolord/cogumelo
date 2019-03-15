@@ -31,6 +31,7 @@ ALLOWED_HOSTS = [u'www.rodrigoluiz.xyz']
 # Application definition
 
 INSTALLED_APPS = [
+    'contacts.apps.ContactsConfig',
     'news.apps.NewsConfig',
     'pages.apps.PagesConfig',
     'django.contrib.admin',

@@ -26,5 +26,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls')),
     path('noticias/', include('news.urls')),
+    path('contato/', include('contacts.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
