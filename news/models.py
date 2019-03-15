@@ -17,5 +17,5 @@ class Post(models.Model):
     is_published = models.BooleanField(default=True)
 
     def __str__(self):
-            return self.title
+        return self.name
 
